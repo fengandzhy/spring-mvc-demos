@@ -63,6 +63,14 @@
 		    <scope>provided</scope>
 		</dependency>
 		
+		<!-- https://mvnrepository.com/artifact/jstl/jstl -->
+		<dependency>
+		    <groupId>jstl</groupId>
+		    <artifactId>jstl</artifactId>
+		    <version>1.2</version>
+		</dependency>
+		
+		
 		<!-- 必须要加这个包，否则报错 -->
 		<dependency>
 			<groupId>junit</groupId>
