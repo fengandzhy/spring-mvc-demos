@@ -7,6 +7,7 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>springmvc-demo01</module>
+		<module>springmvc-requestmapping</module>
 	</modules>
 	
 	<dependencies>
@@ -67,6 +68,7 @@
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
 			<scope>test</scope>
-		</dependency>		
+		</dependency>
+				
 	</dependencies>
 </project>
