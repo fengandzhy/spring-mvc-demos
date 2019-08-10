@@ -10,5 +10,7 @@
 	
 	<!-- 配置视图解析器 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"></bean>
-
+	
+	
+	<bean name="/hello.do" class="com.citi.springmvc.controller.HelloContorller"></bean>
 </beans>

@@ -9,6 +9,7 @@
 		<module>springmvc-demo01</module>
 		<module>springmvc-requestmapping</module>
 		<module>springmvc-dispatcherservler</module>
+		<module>springmvc-requestparam</module>
 	</modules>
 	
 	<dependencies>

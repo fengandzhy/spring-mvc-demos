@@ -11,6 +11,7 @@ public class HelloContorller implements Controller {
 	@Override
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ModelAndView mv = new ModelAndView();
+		mv.addObject("hello","java");
 		mv.setViewName("/index.jsp");
 		return mv;
 	}
