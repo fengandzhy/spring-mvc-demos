@@ -1,4 +1,4 @@
-package com.citi.springmvc.controller;
+package org.zhouhy.springmvc.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

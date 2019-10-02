@@ -12,5 +12,5 @@
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"></bean>
 	
 	
-	<bean name="/hello.do" class="com.citi.springmvc.controller.HelloContorller"></bean>
+	<bean name="/hello.do" class="org.zhouhy.springmvc.controller.HelloContorller"></bean>
 </beans>
