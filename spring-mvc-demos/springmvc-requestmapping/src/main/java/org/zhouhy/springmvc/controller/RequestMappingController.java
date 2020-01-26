@@ -17,6 +17,10 @@ public class RequestMappingController {
 		return "success";
 	}
 	
+	
+	/**
+	 * 浏览器能够解析这种类型(produces的类型),才会响应过去
+	 * */
 	@RequestMapping(value="/testProduces",method=RequestMethod.POST,produces="application/json")
 	public String producesTest(){
 		System.out.println("producesTest 方法");
