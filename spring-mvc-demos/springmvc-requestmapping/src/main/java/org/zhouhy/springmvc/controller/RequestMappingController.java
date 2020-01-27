@@ -50,6 +50,7 @@ public class RequestMappingController {
 	
 	/**
 	 * name参数的值,如果没有配置指定,默认值是RMC#nameTest(类的大写字符+#+方法名)
+	 * 这个属性用的不多，无需过多关注
 	 * 
 	 * */
 	@RequestMapping(value="/testName",method=RequestMethod.GET,name="yyyy")

@@ -16,6 +16,7 @@
 		<property name="suffix" value=".jsp"></property>
 	</bean>
 	
+	<!-- 使用name属性之前必须要配置的东西 -->
 	<bean id="requestMappingInfoHandlerMapping" 
 		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping">
 	</bean>

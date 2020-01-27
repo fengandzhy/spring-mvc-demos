@@ -30,7 +30,7 @@ public class RequestParamController {
 		return "success";
 	}
 	
-	/**设置默认值*/
+	/**设置默认值,如果不设置默认值,前端不传值，就报错*/
 	@RequestMapping(value="/param3",method=RequestMethod.POST)
 	public String testRequestParam3(@RequestParam(name="username") String name,
 			@RequestParam(defaultValue="0") String age){
@@ -40,7 +40,9 @@ public class RequestParamController {
 	}
 	
 	/**此时的age是int，如果前台没有传值，那么就是null，null无法赋值给age,所以报错
-	 * 所以这里最好不要用基本数据类型，用Integer*/
+	 * 所以这里最好不要用基本数据类型，用Integer
+	 * 默认request是true,
+	 * */
 	@RequestMapping(value="/param4",method={RequestMethod.POST,RequestMethod.GET})
 	public String testRequestParam4(@RequestParam(name="username") String name,
 			@RequestParam(required=true) Integer age){
