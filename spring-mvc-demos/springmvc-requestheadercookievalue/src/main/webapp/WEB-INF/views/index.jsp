@@ -7,12 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="${pageContext.request.contextPath}/requestmapping/testProduces" method="post">
+	<%-- <form action="${pageContext.request.contextPath}/requestmapping/testProduces" method="post">
 		<input type="text" name="username"/>
 		<input type="submit" value="提交"></input>
-	</form>
+	</form> --%>
 	
-	<form action="${pageContext.request.contextPath}/requestparam/testParams" method="post">
+	<form action="${pageContext.request.contextPath}/datatransmit/byreqandresp" method="post">
 		username:<input type="text" name="username"/><br/>
 		age:<input type="text" name="age"/>
 		<input type="submit" value="提交"></input>
