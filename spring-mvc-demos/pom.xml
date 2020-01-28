@@ -11,6 +11,7 @@
 		<module>springmvc-dispatcherservler</module>
 		<module>springmvc-requestparam</module>
 		<module>springmvc-requestheadercookievalue</module>
+		<module>springmvc-datatransmit</module>
 	</modules>
 	
 	

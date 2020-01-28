@@ -7,14 +7,9 @@
 		<artifactId>spring-mvc-demos</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>springmvc-requestheadercookievalue</artifactId>
+	<artifactId>springmvc-datatransmit</artifactId>
 	<packaging>war</packaging>
 	
-	<properties>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
-		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
-	</properties>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
 		<dependency>
@@ -72,8 +67,7 @@
 		    <groupId>jstl</groupId>
 		    <artifactId>jstl</artifactId>
 		    <version>1.2</version>
-		</dependency>
-		
+		</dependency>		
 		
 		<!-- 必须要加这个包，否则报错 -->
 		<dependency>
@@ -81,7 +75,12 @@
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
 			<scope>test</scope>
-		</dependency>
-				
+		</dependency>				
 	</dependencies>
+	
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+	</properties>
 </project>
