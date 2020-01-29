@@ -13,6 +13,7 @@
 		<module>springmvc-requestheadercookievalue</module>
 		<module>springmvc-datatransmit</module>
 		<module>springmvc-datamodel</module>
+		<module>springmvc-fmt</module>
 	</modules>
 	
 	
