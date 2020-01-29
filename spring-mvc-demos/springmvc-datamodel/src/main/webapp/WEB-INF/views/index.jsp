@@ -21,13 +21,16 @@
 	</form>
 	
 	
-	<form action="${pageContext.request.contextPath}/datamodel/map" method="post">
+	<form action="${pageContext.request.contextPath}/datamodel/model" method="post">
 		username:<input type="text" name="username"/><br/>
 		age:<input type="text" name="age"/>
 		<input type="submit" value="提交"></input>
 	</form>
 	
-	<%-- <a href="${s:mvcUrl('RMC#nameTest').build()}">test name</a> --%>
-	<%-- <a href="${s:mvcUrl('yyyy').build()}">test name</a> --%>
+	<form action="${pageContext.request.contextPath}/session/model" method="post">
+		username:<input type="text" name="username"/><br/>
+		age:<input type="text" name="age"/>
+		<input type="submit" value="提交"></input>
+	</form>
 </body>
 </html>
