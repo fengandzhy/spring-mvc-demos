@@ -67,13 +67,25 @@
 		</dependency>
 		
 		<!-- https://mvnrepository.com/artifact/jstl/jstl -->
-		<dependency>
+		<!-- <dependency>
 		    <groupId>jstl</groupId>
 		    <artifactId>jstl</artifactId>
 		    <version>1.2</version>
+		</dependency> -->
+		
+		<dependency>
+		    <groupId>org.apache.taglibs</groupId>
+		    <artifactId>taglibs-standard-spec</artifactId>
+		    <version>1.2.5</version>
+		    <type>bundle</type>
 		</dependency>
 		
-		
+		<dependency>
+		    <groupId>org.apache.taglibs</groupId>
+		    <artifactId>taglibs-standard-impl</artifactId>
+		    <version>1.2.5</version>
+		    <type>bundle</type>
+		</dependency>
 		<!-- 必须要加这个包，否则报错 -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -83,4 +95,14 @@
 		</dependency>
 				
 	</dependencies>
+	<!-- 有了这种插件就能识别bundle类型的jar包 -->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+			</plugin>
+		</plugins>
+	</build>
 </project>

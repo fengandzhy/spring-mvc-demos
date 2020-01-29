@@ -1,6 +1,6 @@
-package org.zhouhy.springmvc.formbean;
+package org.zhouhy.springmvc.bean;
 
-public class UserFormBean {
+public class User {
 	private Integer id;
 	private String username;
 	private Integer age;
@@ -22,11 +22,11 @@ public class UserFormBean {
 	public void setAge(Integer age) {
 		this.age = age;
 	}
-	public UserFormBean() {
+	public User() {
 		super();
 	}
 	@Override
 	public String toString() {
-		return "UserFormBean [id=" + id + ", username=" + username + ", age=" + age + "]";
-	}	
+		return "User [id=" + id + ", username=" + username + ", age=" + age + "]";
+	}
 }

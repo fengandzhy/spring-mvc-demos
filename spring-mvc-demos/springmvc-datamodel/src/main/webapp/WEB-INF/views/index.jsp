@@ -8,7 +8,20 @@
 <title>Insert title here</title>
 </head>
 <body>	
-	<form action="${pageContext.request.contextPath}/requestparam/param4" method="post">
+	<form action="${pageContext.request.contextPath}/datamodel/modelandview" method="post">
+		username:<input type="text" name="username"/><br/>
+		age:<input type="text" name="age"/>
+		<input type="submit" value="提交"></input>
+	</form>
+	
+	<form action="${pageContext.request.contextPath}/datamodel/map" method="post">
+		username:<input type="text" name="username"/><br/>
+		age:<input type="text" name="age"/>
+		<input type="submit" value="提交"></input>
+	</form>
+	
+	
+	<form action="${pageContext.request.contextPath}/datamodel/map" method="post">
 		username:<input type="text" name="username"/><br/>
 		age:<input type="text" name="age"/>
 		<input type="submit" value="提交"></input>
