@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="s" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,8 +9,8 @@
 </head>
 <body>	
 	<form action="${pageContext.request.contextPath}/datamodel/modelandview" method="post">
-		username:<input type="text" name="username"/><br/>
-		age:<input type="password" name="age"/>
+		<fmt:message key="i18n.username"></fmt:message>:<input type="text" name="username"/><br/>
+		<fmt:message key="i18n.password"></fmt:message>:<input type="password" name="age"/>
 		<input type="submit" value="提交"></input>
 	</form>
 	
