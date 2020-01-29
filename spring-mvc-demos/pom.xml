@@ -12,6 +12,7 @@
 		<module>springmvc-requestparam</module>
 		<module>springmvc-requestheadercookievalue</module>
 		<module>springmvc-datatransmit</module>
+		<module>springmvc-datamodel</module>
 	</modules>
 	
 	
