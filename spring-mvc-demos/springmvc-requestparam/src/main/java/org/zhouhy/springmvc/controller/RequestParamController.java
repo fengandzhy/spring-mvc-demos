@@ -43,11 +43,11 @@ public class RequestParamController {
 	 * 所以这里最好不要用基本数据类型，用Integer
 	 * 默认request是true,
 	 * */
-	@RequestMapping(value="/param4",method={RequestMethod.POST,RequestMethod.GET})
+	@RequestMapping(value="/test",method={RequestMethod.POST,RequestMethod.GET})
 	public String testRequestParam4(@RequestParam(name="username") String name,
 			@RequestParam(required=true) Integer age){
 		System.out.println("username="+name);
 		System.out.println("age="+age);
-		return "success";
+		return null;
 	}
 }

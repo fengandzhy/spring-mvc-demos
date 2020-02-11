@@ -14,6 +14,7 @@
 		<module>springmvc-datatransmit</module>
 		<module>springmvc-datamodel</module>
 		<module>springmvc-fmt</module>
+		<module>springmvc-viewcontroller</module>
 	</modules>
 	
 	
