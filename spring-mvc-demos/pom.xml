@@ -15,6 +15,7 @@
 		<module>springmvc-datamodel</module>
 		<module>springmvc-fmt</module>
 		<module>springmvc-viewcontroller</module>
+		<module>springmvc-viewers</module>
 	</modules>
 	
 	
