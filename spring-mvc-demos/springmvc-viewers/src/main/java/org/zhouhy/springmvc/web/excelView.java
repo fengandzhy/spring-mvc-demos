@@ -6,6 +6,12 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.poi.hssf.util.HSSFColor.HSSFColorPredefined;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.Font;
+import org.apache.poi.ss.usermodel.HorizontalAlignment;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.web.servlet.view.document.AbstractXlsxView;
 import org.zhouhy.springmvc.beans.User;
@@ -26,7 +32,25 @@ public class excelView extends AbstractXlsxView{
 		response.setHeader("Content-Disposition", "inline;filename="+new String(fileName.getBytes(ENCODING)));
 		
 		List<User> users = (List<User>)model.get("userList");
+		Sheet sheet = workbook.createSheet("basicInfo");
 		
+		Row headRow = sheet.createRow(0);
+		headRow.createCell(0).setCellValue("ID");
+		headRow.createCell(1).setCellValue("UserName");
+		headRow.createCell(2).setCellValue("Password");
+		headRow.createCell(3).setCellValue("Email");
+		
+		CellStyle cellStyle = workbook.createCellStyle();
+		cellStyle.setAlignment(HorizontalAlignment.LEFT);
+		Font font =  workbook.createFont();
+		font.setColor(HSSFColorPredefined.RED.getIndex());
+		cellStyle.setFont(font);
+		
+		int rowNumber = 1;
+		for(User user:users) {
+			Row row = sheet.createRow(rowNumber++);
+			
+		}
 		
 	}
 

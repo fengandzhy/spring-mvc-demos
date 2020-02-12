@@ -82,6 +82,11 @@
 		    <version>3.15</version>
 		</dependency>
 		
+		<dependency>  
+            <groupId>org.apache.poi</groupId>  
+            <artifactId>poi</artifactId>  
+            <version>3.16</version>  
+        </dependency> 		
 		
 		<!-- 必须要加这个包，否则报错 -->
 		<dependency>
