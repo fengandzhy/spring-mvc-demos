@@ -1,5 +1,6 @@
 package org.zhouhy.springmvc.web;
 
+import java.io.OutputStream;
 import java.util.List;
 import java.util.Map;
 
@@ -13,10 +14,12 @@ import org.apache.poi.ss.usermodel.HorizontalAlignment;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.view.document.AbstractXlsxView;
 import org.zhouhy.springmvc.beans.User;
 
-public class excelView extends AbstractXlsxView{
+@Component("excelView")
+public class ExcelView extends AbstractXlsxView{
 
 	private static final String EXCEL_NAME = "UserList.xlsx";
 	private static final String ENCODING="UTF-8";
@@ -49,9 +52,16 @@ public class excelView extends AbstractXlsxView{
 		int rowNumber = 1;
 		for(User user:users) {
 			Row row = sheet.createRow(rowNumber++);
-			
+			row.createCell(0).setCellValue(user.getId());
+			row.createCell(1).setCellValue(user.getUsername());
+			row.createCell(2).setCellValue(user.getPassword());
+			row.createCell(3).setCellValue(user.getEmail());
 		}
 		
+		OutputStream outputStream = response.getOutputStream();
+		workbook.write(outputStream);
+		outputStream.flush();
+		outputStream.close();
 	}
 
 }

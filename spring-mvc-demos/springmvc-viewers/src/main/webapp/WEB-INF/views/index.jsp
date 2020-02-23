@@ -8,9 +8,11 @@
 <title>Insert title here</title>
 </head>
 <body>	
-	<form action="${pageContext.request.contextPath}/viewcontroller/test" method="post">
+	<form action="${pageContext.request.contextPath}/excelviews/excel2" method="post">
+		id:<input type="text" name="id"/><br/>
 		username:<input type="text" name="username"/><br/>
-		age:<input type="text" name="age"/>
+		password:<input type="password" name="password"/><br/>
+		email:<input type="text" name="email"/><br/>
 		<input type="submit" value="提交"></input>
 	</form>
 	
