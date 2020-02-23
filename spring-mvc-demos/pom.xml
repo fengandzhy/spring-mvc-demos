@@ -16,6 +16,7 @@
 		<module>springmvc-fmt</module>
 		<module>springmvc-viewcontroller</module>
 		<module>springmvc-viewers</module>
+		<module>spring-mvc-redirect</module>
 	</modules>
 	
 	
