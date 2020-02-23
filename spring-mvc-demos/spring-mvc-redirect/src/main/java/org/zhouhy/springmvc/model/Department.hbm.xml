@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 24, 2020 6:38:08 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="org.zhouhy.springmvc.model.Department" table="t_department">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <property name="dptName" type="java.lang.String">
+            <column name="dpt_name" />
+        </property>
+    </class>
+</hibernate-mapping>
