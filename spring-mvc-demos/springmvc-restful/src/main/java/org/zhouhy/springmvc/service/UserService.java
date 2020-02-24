@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.zhouhy.springmvc.model.User;
 
-public interface UserService {
+public interface UserService extends BaseService<User>{
 	
 	public List<User> getAll();
 }

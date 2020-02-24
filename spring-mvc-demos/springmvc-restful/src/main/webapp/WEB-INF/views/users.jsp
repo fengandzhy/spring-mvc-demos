@@ -23,7 +23,7 @@
 			<td>${user.username}</td>
 			<td>${user.password}</td>
 			<td>${user.dpt.dptName}</td>
-			<td><a href="#">修改</a>&nbsp;<a href="#">删除</a></td>
+			<td><a href="${pageContext.request.contextPath}/restfultest/users/${user.id}">修改</a>&nbsp;<a href="#">删除</a></td>
 		</tr>
 		</c:forEach>		
 	</table>
