@@ -6,5 +6,7 @@ public interface BaseService<T> {
 	
 	public void update(T t);
 	
+	public void delete(Integer id);
+	
 	public T getOneById(Integer id);
 }
