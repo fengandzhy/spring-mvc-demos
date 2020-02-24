@@ -60,4 +60,26 @@ public class RestController {
 		userService.update(ouser);
 		return "redirect:/restfultest/users";
 	}
+	
+	@RequestMapping(value="/user",method=RequestMethod.GET)
+	public String createUserView(Model model) {
+		model.addAttribute("command", new User());
+		List<Department> dList = departmentService.getAll();
+		model.addAttribute("dpts",dList);//与页面当中的变量一致items="${dpts}"
+		return "addUser";
+	}
+	
+	@RequestMapping(value="/user",method=RequestMethod.POST)
+	public String createUser(User user) {
+		userService.add(user);
+		return "redirect:/restfultest/users";
+	}
+	
+	@RequestMapping(value="/user/{id}",method=RequestMethod.DELETE)
+	public String deleteUser(@PathVariable("id") Integer id) {
+		if(id!=null) {
+			userService.delete(id);
+		}
+		return "redirect:/restfultest/users";
+	}
 }

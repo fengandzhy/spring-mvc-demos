@@ -19,4 +19,7 @@
 		<property name="prefix" value="/WEB-INF/views/"></property>
 		<property name="suffix" value=".jsp"></property>
 	</bean>
+	
+	<!-- 视图解析器不解析静态资源 -->
+	<mvc:default-servlet-handler/>
 </beans>
