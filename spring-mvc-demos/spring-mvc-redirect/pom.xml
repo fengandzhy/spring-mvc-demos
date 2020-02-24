@@ -7,7 +7,7 @@
 		<artifactId>spring-mvc-demos</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>spring-mvc-redirect</artifactId>
+	<artifactId>springmvc-restful</artifactId>
 	<packaging>war</packaging>
 
 	<dependencies>
