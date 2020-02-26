@@ -21,6 +21,7 @@ public class InitbinderController {
 	@InitBinder  
 	public void initBinder(WebDataBinder binder) throws Exception {  
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd"); 
+		df.setLenient(false);
 		CustomDateEditor dateEditor = new CustomDateEditor(df, true);
 		CustomBigDecimalEditor bigDecimalEditor = new CustomBigDecimalEditor();
 		binder.registerCustomEditor(Date.class, dateEditor);

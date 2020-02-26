@@ -18,6 +18,7 @@
 		<module>springmvc-viewers</module>
 		<module>springmvc-restful</module>
 		<module>springmvc-initbinder</module>
+		<module>springmvc-validation</module>
 	</modules>
 	
 	
