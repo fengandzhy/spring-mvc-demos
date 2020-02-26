@@ -17,6 +17,7 @@
 		<module>springmvc-viewcontroller</module>
 		<module>springmvc-viewers</module>
 		<module>springmvc-restful</module>
+		<module>springmvc-initbinder</module>
 	</modules>
 	
 	
