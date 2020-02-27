@@ -19,6 +19,7 @@
 		<module>springmvc-restful</module>
 		<module>springmvc-initbinder</module>
 		<module>springmvc-validation</module>
+		<module>springmvc-json</module>
 	</modules>
 	
 	
