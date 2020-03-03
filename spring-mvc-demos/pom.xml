@@ -21,6 +21,7 @@
 		<module>springmvc-validation</module>
 		<module>springmvc-json</module>
 		<module>springmvc-upload</module>
+		<module>spring-mvc-interceptor</module>
 	</modules>
 	
 	

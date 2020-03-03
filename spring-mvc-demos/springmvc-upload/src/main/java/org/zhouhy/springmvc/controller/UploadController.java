@@ -20,7 +20,8 @@ public class UploadController {
 			@RequestParam("file") MultipartFile file,
 			HttpServletRequest request) throws IllegalStateException, IOException {
 		if(!file.isEmpty()) {
-			String path = request.getServletContext().getRealPath("/resources/uploadFiles");
+			String path = request.getServletContext().getRealPath("/resources/uploadFiles/");
+			//String path = request.getServletContext().getContextPath();
 			System.out.println(path);
 			String filename = file.getOriginalFilename();
 			File filepath = new File(path,filename);
