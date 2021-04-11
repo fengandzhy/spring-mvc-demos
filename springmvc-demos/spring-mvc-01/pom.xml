@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springmvc-demo01</artifactId>
+    <artifactId>spring-mvc-01</artifactId>
 
 
 </project>
