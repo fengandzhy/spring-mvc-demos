@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>springmvc-requestmapping</module>
+        <module>springmvc-databinding</module>
     </modules>
     <packaging>pom</packaging>
 

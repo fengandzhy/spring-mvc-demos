@@ -8,7 +8,9 @@ package org.zhouhy.springmvc;
  * 
  * 2. 关于@RequestParam 请参看本例的IndexController 
  * 
- * 3. 
+ * 3. 关于lombok的使用, 如果要使用@Slf4j的日志, 光有lombok一个依赖是不够的, 还需要加入日志依赖, 在这里加的是slf4j-simple
+ * 
+ * 4. 可以在project structure里面的 Artifacts 里面手动加入jar文件, 具体参考网易有道云笔记
  * 
  * */
 public class App {
