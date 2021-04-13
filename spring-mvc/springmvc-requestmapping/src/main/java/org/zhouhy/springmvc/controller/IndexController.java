@@ -1,11 +1,15 @@
 package org.zhouhy.springmvc.controller;
 
 
+
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+
+@Slf4j
 @RestController
 @RequestMapping(value="demo01")
 public class IndexController {
@@ -37,7 +41,7 @@ public class IndexController {
      * 
      * */
     @RequestMapping(value = "/id")
-    String getIdByValue(@RequestParam("id") String personId) {
+    public String getIdByValue(@RequestParam("id") String personId) {
         System.out.println("ID is " + personId);
         return "Get ID from query string of URL with value element";
     }
@@ -49,11 +53,16 @@ public class IndexController {
      *
      * */
     @RequestMapping(value = "/personId")
-    String getId(@RequestParam String personId) {
+    public String getId(@RequestParam String personId) {
         System.out.println("ID is " + personId);
         return "Get ID from query string of URL without value element";
     }
 
-    
+    @RequestMapping(value = "/person")
+    public String getPerson(@RequestParam(value="person",required = false) String name) {
+        //log.info("name is " + name);
+        log.info("abc");
+        return "Get ID from query string of URL without value element";
+    }
     
 }
