@@ -3,15 +3,12 @@ package org.zhouhy.springmvc.controller;
 
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 @Slf4j
 @RestController
-@RequestMapping(value="demo01")
+@RequestMapping(value="/demo01")
 public class IndexController {
 
     @RequestMapping(value={"","/","index"},method = RequestMethod.GET)
@@ -58,13 +55,61 @@ public class IndexController {
         return "Get ID from query string of URL without value element";
     }
 
-    @RequestMapping(value = "/person")
+    @RequestMapping(value = "/person1")
     public String getPerson(@RequestParam(value="person",required = false) String name) {
         //log.info("name is " + name);
         log.info("abc");
         return "Get ID from query string of URL without value element";
     }
+
+    @RequestMapping(value = "/person2")
+    public String getName(@RequestParam(value = "person", defaultValue = "John") String personName) {
+        log.info("name is "+personName);
+        return "Required element of request param";
+    }
+
+    /**
+     * 如果浏览器支持解析application/JSON 类型的数据, 则就转发
+     * */
+    @RequestMapping(value = "/prod", produces = {
+            "application/JSON"
+    })
+    @ResponseBody
+    public String getProduces() {
+        return "Produces attribute";
+    }
+
     
-    
+    /**
+     * contentType 必须是application/JSON 和 application/XML 才会被这个方法受理
+     * */
+    @RequestMapping(value = "/cons", consumes = {
+            "application/JSON",
+            "application/XML"
+    })
+    public String getConsumes() {
+        return "Consumes attribute";
+    }
+
+    /**
+     * 请求参数必须包含personId,才会处理请求
+     * */
+    @RequestMapping(value = "/fetch", params = {
+            "personId"
+    })
+    public String getParams(@RequestParam("personId") String id) {
+        return "Fetched parameter using params attribute = " + id;
+    }
+
+
+    /**
+     * 1. 引入这个RequestMappingHandlerMapping
+     * 2. 定义一个name属性
+     * 3. 前台写成${s:mvcUrl('getNames').arg(0,'3').arg(1,'5').build()}就可以访问到这个方法了
+     * */
+    @RequestMapping(value = "/name", name = "getNames")
+    public String getNames(@RequestParam("personId") String id,@RequestParam("personName") String name) {
+        return "Fetched parameter using params attribute = " + id+","+name;
+    }
     
 }
