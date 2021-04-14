@@ -47,7 +47,7 @@ public class SpecialDateEditor extends PropertyEditorSupport {
 
     private SimpleDateFormat getSimpleDateFormat(String source) {
         SimpleDateFormat sdf = new SimpleDateFormat();
-        if (Pattern.matches("^\\d{4}-\\d{2}-\\d{2}$", source)) { // yyyy-MM-dd
+        if (Pattern.matches("^[0-9]{4,}-[0-9]+-[0-9]+$", source)) { // yyyy-MM-dd
             sdf = new SimpleDateFormat("yyyy-MM-dd");
         } else if (Pattern.matches("^\\d{4}-\\d{2}-\\d{2} \\d{2}-\\d{2}-\\d{2}$", source)) { // yyyy-MM-dd HH-mm-ss
             sdf = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
